@@ -31,12 +31,28 @@ def test_has_a_vowel():
     print('Testing function has_a_vowel')
 
 def test_first_inside_quotes():
-    result = quotes.first_inside_quotes("A 'B C' D")
+    result = quotes.first_inside_quotes('D "B C" E')
     introcs.assert_equals("B C",result)
+
+    result = quotes.first_inside_quotes('A "B C" D "E F" G')
+    introcs.assert_equals("B C",result)
+
+    result = quotes.first_inside_quotes('"Hello"')
+    introcs.assert_equals('Hello',result)
+
+    result = quotes.first_inside_quotes('A '' B')
+    introcs.assert_equals("",result)
+    
     print('Testing function first_inside_quotes')
+
+def test_replace_first():
+    result = funcs.replace_first("poll","l","o")
+    introcs.assert_equals("pool",result)
+
 
 # SCRIPT CODE (Call Test Procedures here)
 test_asserts()
 test_has_a_vowel()
 test_first_inside_quotes()
+test_replace_first()
 print('Module funcs is working correctly')
