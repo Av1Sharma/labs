@@ -32,3 +32,22 @@ def europeanize(date):
 
 europeanize('12/4/18')
 
+
+## Simpler Version
+
+'''
+def europeanize(date):
+    day, month, year = date.split('/')
+    if len(day) < 2:
+        day = '0' + day
+    if len(month) < 2:
+        month = '0' + month
+    return month + '/' + day + '/' + year
+        
+
+
+
+
+
+
+'''
