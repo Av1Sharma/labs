@@ -44,4 +44,11 @@ def project(u,v):
     Parameter v: the vector to project on to
     Preconditions: v is a Vector2 object
     """
-    pass # STUB. Implement me
+    v_dot_v = v.x**2 + v.y**2
+    if v_dot_v == 0:
+        return introcs.Vector2(0.0, 0.0)
+        
+    u_dot_v = u.x * v.x + u.y * v.y
+    scale = u_dot_v / v_dot_v
+    return introcs.Vector2(v.x * scale, v.y * scale)
+
