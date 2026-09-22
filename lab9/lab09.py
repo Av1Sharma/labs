@@ -26,7 +26,14 @@ def add_time1(time1, time2):
     Parameter time2: the time to add
     Precondition: time2 is a Time object
     """
-    pass # STUB. Implement me
+    rMinutes = time1.minutes + time2.minutes
+    accMinutes = rMinutes % 60
+    accHours = rMinutes // 60
+
+    hours = time1.hours + time2.hours
+    accHours += hours
+
+    return Time(accHours, accMinutes)
 
 
 def add_time2(time1, time2):
@@ -45,4 +52,3 @@ def add_time2(time1, time2):
     Parameter time2: the time to add
     Precondition: time2 is a Time object
     """
-    pass # STUB. Implement me
