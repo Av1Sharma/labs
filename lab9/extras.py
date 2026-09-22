@@ -23,7 +23,11 @@ def normalize(v):
     Parameter v: the vector to normalize
     Preconditions: v is a Vector2 object
     """
-    pass # STUB. Implement me
+    vsub = ((v.x ** 2) + (v.y ** 2)) ** 0.5
+    if vsub > 0:
+        v.x = v.x / vsub
+        v.y = v.y / vsub
+
 
 
 def project(u,v):
