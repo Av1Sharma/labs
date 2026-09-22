@@ -44,10 +44,11 @@ def ratings_adjustment(ratings):
     Return the corrected dictionary.
     """
     backendRating = ratings['backend']
-    for key, val in list(ratings.items()):
+    for key, val in ratings.items():
         if val > backendRating:
             del ratings[key]
     return ratings
+    
 
 class Counter:
     """
@@ -61,17 +62,7 @@ class Counter:
     'value' would be an instance variable in this Counter class.
     On creation, this should be initialized to 0.
     """
-    def __init__(self):
-        self.value = 0
-
-    def getVal(self):
-        return self.value
-
-    def inc(self):
-        self.value += 1
-
-    def dec(self):
-        self.value -= 1
+    pass
 
 
 """
