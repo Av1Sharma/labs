@@ -62,7 +62,14 @@ class Counter:
     'value' would be an instance variable in this Counter class.
     On creation, this should be initialized to 0.
     """
-    pass
+    def __init__(self):
+        self.value = 0
+    def getVal(self):
+        return self.value
+    def inc(self):
+        self.value += 1
+    def dec(self):
+        self.value -= 1
 
 
 """
