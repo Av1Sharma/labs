@@ -43,13 +43,10 @@ def ratings_adjustment(ratings):
 
     Return the corrected dictionary.
     """
-    backendRating = ratings['backend']
-    ratingsToDel = []
-    for key, val in ratings.items():
-        if val > backendRating:
-            ratingsToDel.append(key)
-    for key in ratingsToDel:
-        del ratings[key]
+    backend_rating = ratings['backend']
+    for course in list(ratings):
+        if ratings[course] > backend_rating:
+            del ratings[course]
     return ratings
     
 
