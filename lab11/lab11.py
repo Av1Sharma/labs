@@ -109,10 +109,41 @@ def is_time_format(s):
     # Even if s is a string, the first number before the colon may be one
     # or two digits.  You must be prepared for either.
     # You might find the method s.isdigit() to be useful.
-    pass
-print(time_to_minutes('2:45 PM'))
-print(time_to_minutes('9:05 AM'))
-print(time_to_minutes('12:00 AM'))
-print(time_to_minutes('01:59 AM'))
-print(time_to_minutes('12:30 PM'))
-print(time_to_minutes('11:15 PM'))
+    if type(s) != str:  # or if not isinstance(s, str):
+        return False
+    if len(s) < 7:
+        return False
+
+    suffix = s[-3:]
+    colon = s.index(':')
+    if suffix != ' PM' and suffix != ' AM':
+        return False
+
+    hour = int(s[:colon])
+    mins = int(s[colon+1:-3])
+
+    if hour < 0 or hour > 12:
+        return False
+
+    if mins < 0 or mins > 59:
+        return False
+
+    return True
+
+
+# ==========================================
+# TEST CASES
+# ==========================================
+
+# print(time_to_minutes('2:45 PM'))
+# print(time_to_minutes('9:05 AM'))
+# print(time_to_minutes('12:00 AM'))
+# print(time_to_minutes('01:59 AM'))
+# print(time_to_minutes('12:30 PM'))
+# print(time_to_minutes('11:15 PM'))
+
+is_time_format('2:45 PM')
+is_time_format('2:45PM')
+is_time_format('14:45')
+is_time_format('14:45 AM')
+is_time_format(245)
