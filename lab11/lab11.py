@@ -79,13 +79,12 @@ def time_to_minutes(s):
 
     # Adjust hour to be correct.
     suff = s[pos2+1:]
-    if (suff == 'PM'):                  # Add 12 to PM values
-        hoar = hour+12
+    if (suff == 'PM' and hour !=12):                  # Add 12 to PM values
+        hour = hour+12
     elif (suff == 'AM' and hour == 12): # Set midnight to 0
         hour = 0
-
     # Get min and convert to int
-    mins = s[pos1:pos2]
+    mins = s[pos1+1:pos2]
     mins = int(mins)
 
     return hour*60+mins
@@ -111,3 +110,9 @@ def is_time_format(s):
     # or two digits.  You must be prepared for either.
     # You might find the method s.isdigit() to be useful.
     pass
+print(time_to_minutes('2:45 PM'))
+print(time_to_minutes('9:05 AM'))
+print(time_to_minutes('12:00 AM'))
+print(time_to_minutes('01:59 AM'))
+print(time_to_minutes('12:30 PM'))
+print(time_to_minutes('11:15 PM'))
