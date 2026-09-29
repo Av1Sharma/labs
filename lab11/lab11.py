@@ -43,8 +43,8 @@ def time_to_military(s):
     # Adjust hour to be correct.
     if (suff == 'PM'):              # Add 12 to PM values
         hour += 12
-    else:                           # Set midnight to 0
-        hour = 0
+    elif (suff == 'AM'):                           # Set midnight to 0
+        hour = hour
 
     # Add a leading zero if necessary
     if (hour < 10):
