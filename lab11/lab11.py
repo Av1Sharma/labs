@@ -18,8 +18,8 @@ def time_to_military(s):
     """
     Returns: the time in 24-hour (military) format.
 
-    24-hour format has the form '<hours>:<minutes>'. The hours are between 0 
-    and 23, and are always two digits (so there must be a leading zero). The 
+    24-hour format has the form '<hours>:<minutes>'. The hours are between 0
+    and 23, and are always two digits (so there must be a leading zero). The
     minutes are between 0 and 59, and are always 2 digits.
 
     Examples:
@@ -41,10 +41,10 @@ def time_to_military(s):
     suff = s[pos2+1:]
 
     # Adjust hour to be correct.
-    if (suff == 'PM'):              # Add 12 to PM values
+    if (suff == 'PM' and hour != 12):
         hour += 12
-    elif (suff == 'AM'):                           # Set midnight to 0
-        hour = hour
+    elif (suff == 'AM' and hour == 12):
+        hour = 0
 
     # Add a leading zero if necessary
     if (hour < 10):
