@@ -16,14 +16,8 @@ def put_in(alist,value):
     Parameter value: The value to append
     Precondition: value is an int
     """
-    if len(alist) == 0:
-        alist.append(value)
-    elif index == len(alist):
-        alist.append(value)
-    elif alist[index] < value:
-        put_in(alist, value, index + 1)
-    else:
-        alist.insert(index, value)
+    alist.append(value)
+    alist.sort()
     
 
 
