@@ -19,20 +19,49 @@ def put_in(alist,value):
     alist.append(value)
     alist.sort()
     
+def replace_first(alist,ovalue,nvalue):
+    """
+    MODIFIES the list so that the first appearance of ovalue becomes nvalue.
 
+    This function is a PROCEDURE.  It does not return a new list.  Instead,
+    it modifies the existing list.
 
-# a = []
-# put_in(a, 3)
+    We do not guarantee that ovalue is in the list.  If it is not there, then
+    the list should remain unchanged.
+
+    Example: If alist is [5, 9, 1, 9, 7], then replace_first(alist,9,3) modifies
+    the list so that alist is now [5, 3, 1, 9, 7].
+
+    Example: If alist is [5, 9, 1, 9, 7], then replace_first(alist,3,2) does
+    not modify the list at all.
+
+    Parameter alist: the list to modify
+    Precondition: alist is a list of ints
+
+    Parameter ovalue: the value to replace
+    Precondition: ovalue is an int
+
+    Parameter nvalue: the value to substitute with
+    Precondition: nvalue is an int
+    """
+    if ovalue in alist:
+        num = alist.index(ovalue)
+        alist[num] = nvalue
+    return alist
+   
+
+# # a = []
+# # put_in(a, 3)
+# # print(a)
+# # a = [0, 2, 3, 4]
+# # put_in(a, 1)
+# # print(a)
+# # a = [0, 2, 3, 4]
+# # put_in(a, 2)
+# # print(a)
+# # a = []
+# # put_in(a, 3)
+# # print(a)
+# a = [0, 1, 2, 3, 4]
+# put_in(a, -1)
 # print(a)
-# a = [0, 2, 3, 4]
-# put_in(a, 1)
-# print(a)
-# a = [0, 2, 3, 4]
-# put_in(a, 2)
-# print(a)
-# a = []
-# put_in(a, 3)
-# print(a)
-a = [0, 1, 2, 3, 4]
-put_in(a, -1)
-print(a)
