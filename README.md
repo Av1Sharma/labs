@@ -16,10 +16,6 @@ The Python exercise index below is regenerated from the source files when a lab 
 <!-- BEGIN AUTO-GENERATED LAB INDEX -->
 ### Python exercise index
 
-#### `BackendOA/`
-
-- [`pretest.py`](BackendOA/pretest.py) — Python exercise or supporting script.
-
 #### `lab1/`
 
 - [`hello1.py`](lab1/hello1.py) — Python exercise or supporting script.
@@ -40,6 +36,12 @@ The Python exercise index below is regenerated from the source files when a lab 
 - [`lesser_than.py`](lab13/lesser_than.py) — Python exercise or supporting script.
 - [`removeall.py`](lab13/removeall.py) — Python exercise or supporting script.
 - [`uniques.py`](lab13/uniques.py) — Python exercise or supporting script.
+
+#### `lab16/`
+
+- [`lab16.py`](lab16/lab16.py) — A module with several recursive functions
+- [`person.py`](lab16/person.py) — A class to rerpresent a genealogical tree
+- [`test16.py`](lab16/test16.py) — Course-provided test or exercise checks.
 
 #### `lab3/`
 
