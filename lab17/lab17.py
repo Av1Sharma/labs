@@ -67,7 +67,6 @@ def place_sums(table):
     contains strings (the headers) (3) each row after the first contains only
     numbers, and (4) each row is the same length.
     """
-    
     table[0].append('Sum')
     for i in range(1,len(table)):
         total = 0
@@ -149,7 +148,14 @@ def average_grade(adict):
     Parameter adict: the dictionary of grades
     Precondition: adict is a dictionary with string keys, int values
     """
-    pass # Implement me
+    e = len(adict.keys())
+
+    total = 0
+    for value in adict.values():
+        total += value
+
+    return total / e
+
 
 
 def convert_grades(adict):

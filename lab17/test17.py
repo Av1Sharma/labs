@@ -317,7 +317,7 @@ if __name__ == '__main__':
 
     # UNCOMMENT ANY OPTIONAL ONES YOU DO
     #test_crossout()
-    #test_average_grade()
+    test_average_grade()
     #test_convert_grades()
     #test_drop_below()
     print('The modules for lab 16 passed all tests')
