@@ -215,5 +215,6 @@ def drop_below(adict,limit):
     Paramater limit: the cut-off boundary
     Precondition: limit is a number (int or float)
     """
-    # Hint: Create a list of netids to drop, and THEN drop them
-    pass # Implement me
+    for key in list(adict.keys()):
+        if adict[key] < limit:
+            del adict[key]
