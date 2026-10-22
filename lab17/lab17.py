@@ -159,7 +159,18 @@ def convert_grades(adict):
     Parameter adict: the dictionary of grades
     Precondition: adict is dictionary mapping strings to ints
     """
-    pass # Implement me
+    for key, value in adict.items():
+        if value >= 90:
+            adict[key] = 'A'
+        elif value >= 80:
+            adict[key] = 'B'
+        elif value >= 70:
+            adict[key] = 'C'
+        elif value >= 60:
+            adict[key] = 'D'
+        else:
+            adict[key] = 'F'
+
 
 
 def drop_below(adict,limit):
