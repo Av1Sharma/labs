@@ -70,7 +70,10 @@ def place_sums(table):
     
     table[0].append('Sum')
     for i in range(1,len(table)):
-        table[i].append(sum(table[i]))
+        total = 0
+        for j in range(len(table[i])):
+            total += table[i][j]
+        table[i].append(total)
 
 
 def letter_grades(adict):
