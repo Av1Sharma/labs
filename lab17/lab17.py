@@ -67,7 +67,10 @@ def place_sums(table):
     contains strings (the headers) (3) each row after the first contains only
     numbers, and (4) each row is the same length.
     """
-    pass # Implement me
+    
+    table[0].append('Sum')
+    for i in range(1,len(table)):
+        table[i].append(sum(table[i]))
 
 
 def letter_grades(adict):
