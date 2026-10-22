@@ -43,6 +43,11 @@ The Python exercise index below is regenerated from the source files when a lab 
 - [`person.py`](lab16/person.py) — A class to rerpresent a genealogical tree
 - [`test16.py`](lab16/test16.py) — Course-provided test or exercise checks.
 
+#### `lab17/`
+
+- [`lab17.py`](lab17/lab17.py) — The functions for Lab 17.
+- [`test17.py`](lab17/test17.py) — Course-provided test or exercise checks.
+
 #### `lab3/`
 
 - [`dice.py`](lab3/dice.py) — A simple die roller
