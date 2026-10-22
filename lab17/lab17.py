@@ -30,7 +30,14 @@ def row_sums(table):
     (1) table is a nested 2D list in row-major order, (2) each row contains
     only numbers, and (3) each row is the same length.
     """
-    pass # Implement me
+    res = []
+    for row in table:
+        total = 0
+        for item in row:
+            total += item
+        res.append(total)
+
+    return res
 
 
 def place_sums(table):
