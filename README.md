@@ -48,6 +48,12 @@ The Python exercise index below is regenerated from the source files when a lab 
 - [`lab17.py`](lab17/lab17.py) — The functions for Lab 17.
 - [`test17.py`](lab17/test17.py) — Course-provided test or exercise checks.
 
+#### `lab18/`
+
+- [`bjack.py`](lab18/bjack.py) — A module for a very simple approximation of the game Blackjack
+- [`card.py`](lab18/card.py) — A module providing a class for playing cards
+- [`test.py`](lab18/test.py) — Course-provided test or exercise checks.
+
 #### `lab3/`
 
 - [`dice.py`](lab3/dice.py) — A simple die roller
