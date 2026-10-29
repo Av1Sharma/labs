@@ -54,6 +54,11 @@ The Python exercise index below is regenerated from the source files when a lab 
 - [`card.py`](lab18/card.py) — A module providing a class for playing cards
 - [`test.py`](lab18/test.py) — Course-provided test or exercise checks.
 
+#### `lab19/`
+
+- [`leng.py`](lab19/leng.py) — The class definition for the class lab
+- [`test.py`](lab19/test.py) — Course-provided test or exercise checks.
+
 #### `lab3/`
 
 - [`dice.py`](lab3/dice.py) — A simple die roller
