@@ -61,7 +61,16 @@ The Python exercise index below is regenerated from the source files when a lab 
 
 #### `lab20/`
 
+- [`card.py`](lab20/card.py) — A module providing a class for playing cards
 - [`classroom.py`](lab20/classroom.py) — Python exercise or supporting script.
+- [`test.py`](lab20/test.py) — Course-provided test or exercise checks.
+- [`wild.py`](lab20/wild.py) — A module providing a class for playing cards with Jokers
+
+#### `lab21/`
+
+- [`card.py`](lab21/card.py) — A module providing a class for playing cards
+- [`test.py`](lab21/test.py) — Course-provided test or exercise checks.
+- [`wild.py`](lab21/wild.py) — A module providing a class for playing cards with Jokers
 
 #### `lab3/`
 
