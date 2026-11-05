@@ -226,7 +226,9 @@ class Card(object):
         Parameter other: the value to compare
         Precondition: other is a Card
         """
-        if (self._rank == other._rank):
+        if not isinstance(other, Card):
+            return False
+        if self._rank == other._rank:
             return self._suit < other._suit
         else:
             left = len(self.RANK_NAMES) if self._rank == 1 else self._rank
