@@ -31,7 +31,7 @@ def initials(alist):
 
 # decorator "fills in" missing comparisons, at the cost of speed
 @total_ordering
-class Card(object):
+def classCard(object):
     """
     A class to represent a standard playing card.
     
