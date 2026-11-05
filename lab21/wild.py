@@ -158,8 +158,9 @@ class WildCard(card.Card):
         Parameter other: the value to compare
         Precondition: NONE (other can be anything)
         """
-        # TODO: implement me, according to my spec
-        pass
+        if not isinstance(other, WildCard):
+            return False
+        return super().__eq__(other) and self._wild == other._wild
     
     def __lt__(self, other):
         """
@@ -171,5 +172,9 @@ class WildCard(card.Card):
         Parameter other: the value to compare
         Precondition: other is a Card
         """
-        # TODO: implement me, according to my spec
-        pass
+        if not isinstance(other, card.Card):
+            return False
+        if self._rank == other._rank and self._suit == other._suit:
+            other_wild = other.isWild() if isinstance(other, WildCard) else False
+            return self._wild and not other_wild
+        return super().__lt__(other)

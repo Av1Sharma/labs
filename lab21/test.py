@@ -8,6 +8,7 @@ Date:    October 29, 2026
 """
 import introcs
 import card
+import wild
 
 
 # This is to make sure we use isinstance correctly
@@ -170,8 +171,8 @@ if __name__ == '__main__':
     test_card_lt()
     
     # OPTIONALS. Uncomment the ones you complete
-    #test_card_deck()
-    #test_wild_eq()
-    #test_wild_lt()
+    test_card_deck()
+    test_wild_eq()
+    test_wild_lt()
 
     print('The module wild passed all tests.')
