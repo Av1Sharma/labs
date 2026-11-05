@@ -172,9 +172,8 @@ class WildCard(card.Card):
         Parameter other: the value to compare
         Precondition: other is a Card
         """
-        if not isinstance(other, card.Card):
-            return False
-        if self._rank == other._rank and self._suit == other._suit:
-            other_wild = other.isWild() if isinstance(other, WildCard) else False
-            return self._wild and not other_wild
+        if super().__eq__(other):
+            is_other_wild = isinstance(other, WildCard) and other.isWild()
+            return self.isWild() and not is_other_wild
+        
         return super().__lt__(other)
